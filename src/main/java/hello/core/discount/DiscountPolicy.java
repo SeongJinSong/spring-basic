@@ -6,5 +6,5 @@ public interface DiscountPolicy {
     /**
      * @return 할일 대상 금액
      */
-    int disocunt(Member member, int price);
+    int discount(Member member, int price);
 }
