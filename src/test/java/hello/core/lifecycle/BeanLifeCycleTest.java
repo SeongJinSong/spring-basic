@@ -16,7 +16,8 @@ public class BeanLifeCycleTest {
     }
     @Configuration
     static class LifeCycleConfig{
-        @Bean(initMethod = "init", destroyMethod = "close")
+        //@Bean(initMethod = "init", destroyMethod = "close") //외부 라이브러리 사용하고, 초기화, 소멸자를 명시해야 할 때 사용
+        @Bean
         public NetworkClient networkClient(){
             NetworkClient networkClient = new NetworkClient();
             networkClient.setUrl("http://heelo-spring.dev");
